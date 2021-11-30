@@ -1,5 +1,5 @@
-![Build Status](https://github.com/KvalitetsIT/kithugs/workflows/CICD/badge.svg) ![Test Coverage](.github/badges/jacoco.svg)
-# kithugs
+![Build Status](https://github.com/KvalitetsIT/regsj-svartidskomponent/workflows/CICD/badge.svg) ![Test Coverage](.github/badges/jacoco.svg)
+# regsj-svartidskomponent
 
 Template repository showing how to be a good Java Spring Boot citizen in a k8s cluster.
 

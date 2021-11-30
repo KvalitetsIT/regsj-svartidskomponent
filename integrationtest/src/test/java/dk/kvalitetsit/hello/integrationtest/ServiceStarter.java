@@ -22,6 +22,8 @@ public class ServiceStarter {
     public void startServices() {
         dockerNetwork = Network.newNetwork();
 
+        System.setProperty("FILE_FOLDER", "/tmp");
+
         SpringApplication.run((VideoLinkHandlerApplication.class));
     }
 
@@ -51,6 +53,8 @@ public class ServiceStarter {
                 .withNetworkAliases("regsj-svartidskomponent")
 
                 .withEnv("LOG_LEVEL", "INFO")
+
+                .withEnv("FILE_FOLDER", "/tmp")
 
 //                .withEnv("JVM_OPTS", "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8000")
 

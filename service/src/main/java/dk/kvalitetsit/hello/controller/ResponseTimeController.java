@@ -3,8 +3,6 @@ package dk.kvalitetsit.hello.controller;
 import dk.kvalitetsit.hello.service.ResponseTimeService;
 import org.openapitools.api.SvartidskomponentApi;
 import org.openapitools.model.Response;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,7 +17,7 @@ public class ResponseTimeController implements SvartidskomponentApi {
     }
 
     @Override
-    public ResponseEntity<Response> restV1PerformanceComplexGet() {
+    public ResponseEntity<Response> restV1ComplexGet() {
         var responseBody = new Response();
         try {
             responseBody.setVersion(helloService.getComplex().getVersion());
@@ -32,7 +30,7 @@ public class ResponseTimeController implements SvartidskomponentApi {
     }
 
     @Override
-    public ResponseEntity<Response> restV1PerformanceSimpleGet() {
+    public ResponseEntity<Response> restV1SimpleGet() {
         var responseBody = new Response();
         responseBody.setVersion(helloService.getSimple().getVersion());
 

@@ -35,7 +35,7 @@ public class ResponseTimeControllerTest {
             return response;
         });
 
-        var result = responseTimeController.restV1PerformanceSimpleGet();
+        var result = responseTimeController.restV1SimpleGet();
 
         assertNotNull(result);
         assertEquals(expectedVersion, result.getBody().getVersion());
@@ -54,7 +54,7 @@ public class ResponseTimeControllerTest {
             return response;
         });
 
-        var result = responseTimeController.restV1PerformanceComplexGet();
+        var result = responseTimeController.restV1ComplexGet();
 
         assertNotNull(result);
         assertEquals(expectedVersion, result.getBody().getVersion());

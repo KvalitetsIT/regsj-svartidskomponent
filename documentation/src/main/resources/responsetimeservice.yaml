@@ -26,7 +26,7 @@ servers:
           - 8080
         default: 8080
 paths:
-    /rest/v1/performance/simple:
+    /rest/v1/simple:
       get:
         tags:
           - Svartidskomponent
@@ -39,7 +39,7 @@ paths:
                 schema:
                   $ref: '#/components/schemas/response'
 
-    /rest/v1/performance/complex:
+    /rest/v1/complex:
       get:
         tags:
           - Svartidskomponent

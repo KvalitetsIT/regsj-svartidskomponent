@@ -95,7 +95,7 @@
 				<configuration>
 					<images>
 						<image>
-							<name>kvalitetsit/regsj-svartidskomponent-documentation</name>
+							<name>regsj/regsj-svartidskomponent-documentation</name>
 							<build>
 								<tags>
 									<tag>dev</tag>

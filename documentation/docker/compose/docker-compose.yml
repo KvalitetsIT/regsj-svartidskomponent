@@ -22,7 +22,7 @@ services:
      ports:
       - 8080:80
    helloservice:
-     image: kvalitetsit/regsj-svartidskomponent:latest
+     image: regsj/regsj-svartidskomponent:latest
      environment:
       - jdbc_url=jdbc:mysql://mysql:3306/hellodb
       - jdbc_user=hellouser
@@ -40,7 +40,7 @@ services:
       mysql:
        condition: service_healthy
    documenatation-and-test:
-     image: kvalitetsit/regsj-svartidskomponent-documentation:latest
+     image: regsj/regsj-svartidskomponent-documentation:latest
      environment:
       - BASE_URL=/test
      ports:

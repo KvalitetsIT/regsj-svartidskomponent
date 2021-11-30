@@ -71,7 +71,7 @@
                 <configuration>
                     <images>
                         <image>
-                            <name>kvalitetsit/regsj-svartidskomponent</name>
+                            <name>regsj/regsj-svartidskomponent</name>
                             <build>
                                 <tags>
                                     <tag>latest</tag>

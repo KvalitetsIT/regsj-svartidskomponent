@@ -1,0 +1,65 @@
+openapi: 3.0.0
+info:
+  title: Svartidskomponent
+  description: API description for svartidskomponent.
+  version: "1.0.0"
+  contact:
+    email: development@kvalitetitsit.dk
+tags:
+  - name: Svartidskomponent
+    description: Svartidskomponent related API's
+
+servers:
+  - url: '{protocol}://{environment}:{port}'
+    variables:
+      protocol:
+        enum:
+          - http
+          - https
+        default: http
+      environment:
+        enum:
+          - localhost # Docker-compose setup
+        default: localhost # Development
+      port:
+        enum:
+          - 8080
+        default: 8080
+paths:
+    /rest/v1/performance/simple:
+      get:
+        tags:
+          - Svartidskomponent
+        summary: Simple endpoint for response time measurment. Does not write any logs etc.
+        responses:
+          '200':
+            description: Ok
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/response'
+
+    /rest/v1/performance/complex:
+      get:
+        tags:
+          - Svartidskomponent
+        summary: Complex endpoint for response time measurement. Writes log statement and file to persistent storage.
+        responses:
+          '200':
+            description: Ok
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/response'
+
+components:
+  schemas:
+    response:
+      type: object
+      required:
+        - version
+      properties:
+        version:
+          description: Version  of component
+          type: string
+          example: "1.0.0"
